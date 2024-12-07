@@ -1,168 +1,682 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Enter Password</title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Personal Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="granim.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas id="canvas-image-blending"></canvas>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="noindex, nofollow">
+    <div class="main-content" style="text-align: center; width: 100%; position: absolute">
+      <center>
 
-        <style>
-            *,
-            *:after,
-            *:before {
-                box-sizing: border-box;
-            }
-            body,
-            html {
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-weight: 300;
-                font-size: 16px;
-                color: #2D3737;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 100%;
-            }
-
-            @media (min-width: 300px) {
-                body, html {
-                    background-image: url("phoneBackground.jpg");
-                    background-size : 100%;
-                }
-            }
-
-            @media (min-width: 850px) {
-                body, html {
-                    background-image : url("backgroundIpad.jpg");
-                    background-size : 100%;
-                    
-                }
-            }
-
-            @media (min-width: 1400px) {
-                body, html {
-                    background-image : url("background.jpeg");
-                    background-size : 100%;
-                    
-                }
-            }
-
-            .protected {
-                background: #fff;
-                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                border-radius: 3px;
-                min-width: 250px;
-
-            }
-            .protected__content {
-                padding: 24px 28px;
-            }
-            .protected__content__heading {
-                font-size: 16px;
-                font-weight: 500;
-                margin: 0 0 12px;
-                line-height: 1;
-            }
-            .protected__alert {
-                display: none;
-                border-bottom: 1px solid transparent;
-                border-radius: 3px 3px 0 0;
-                padding: 12px 14px;
-                color: #a94442;
-                background-color: #f2dede;
-                border-color: #ebccd1;
-            }
-            .protected__content__input {
-                display: block;
-                border: solid 1px #ccc;
-                padding: 12px 14px;
-                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                font-size: 16px;
-                width: 100%;
-                border-radius: 3px;
-
-                margin-bottom: 12px;
-            }
-            .protected__content__input:focus {
-                outline: none;
-                border-color: #228843;
-            }
-            .protected__content__btn {
-                background-color: #228843;
-                border-radius: 3px;
-                cursor: pointer;
-                border: none;
-                color: #fff;
-                padding: 12px 14px;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-weight: 500;
-                font-size: 16px;
-
-            }
-            .protected__content__btn:hover {
-                background-color: #1C6D36;
-            }
-
-        </style>
-
-    </head>
-
-    <body>
-
-        <div class="protected">
-            <div class="protected__alert" data-id="alert">Wrong password, try again</div>
-            <div class="protected__content">
-                <h1 class="protected__content__heading">Enter the password to unlock Rosalie's website</h1>
-                <input class="protected__content__input" data-id="password" type="password" placeholder="password"/>
-                <button data-id="button" type="button" class="protected__content__btn">Continue</button>
-            </div>
+        <div class="" style="height: 750px;">
+          <h1 style="padding-top: 230px; color: white;">Hi, my name is Garrett Smith</h1>
+          <p style="padding-top: 25px; color: white;" id="app"></p>
         </div>
 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
-        <script type="text/javascript">
-            "use strict"
-            var button = document.querySelectorAll('[data-id="button"]')
-            var password = document.querySelectorAll('[data-id="password"]')
+        <h2 style="padding-bottom: 10px; padding-top: 10px;">Introduction</h2>
 
-            function login(secret) {
-                var hash = sha1(secret)
-                var url = hash + "/index.html"
-                var alert = document.querySelectorAll('[data-id="alert"]')
+        <!-- Introduction -->
+        <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 20px;">
+          <div class="big-container-left" style="">
+            <p class="time-text">Fun fact: My wife and I had 4 children in exactly 3 years! There was a set of twins in the middle there - and we love them to death they're our pride and joy. </p>
+            <p style="padding-bottom: 5px;">Greetings! My name is Garrett. I'm an operations professional specializing in supply chain strategy, market management, and business operations. I have over a decade of experience in driving operational excellence across various industries including consumer electronics, e-commerce, health & wellness, medtech, and marketplace (rideshare transportation). I've been successful in managing complex logistics, optimizing information systems, and building KPI frameworks to align with organizational goals. I excel at leveraging ERP, WMS, and analytics tools to enhance operational efficiency, service level, and profitability.
+            </p>
+          </div>
+          <div class="small-container-right">
+            <img src="assets/garrett profile picture 1.jpeg" class="title-image">
+          </div>
+        </div>
 
-                var request = new XMLHttpRequest()
-                request.open('GET', url, true)
+        <h2 style="padding-bottom: 20px">My Projects</h2>
 
-                request.onload = function () {
-                    if (request.status >= 200 && request.status < 400) {
-                        window.location = url
-                    } else {
-                        parent.location.hash = hash
-                        alert[0].style.display = 'block'
-                        password[0].setAttribute('placeholder', 'Incorrect password')
-                        password[0].value = ''
-                    }
-                }
-                request.onerror = function () {
-                    parent.location.hash = hash
-                    alert[0].style.display = 'block'
-                    password[0].setAttribute('placeholder', 'Incorrect password')
-                    password[0].value = ''
-                }
-                request.send()
-            }
+        <!-- Current Project #1 -->
+        <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 40px;">
+          <div class="big-container-left">
+            <h3>Market Growth
+            </h3>
+            <p class="time-text">Transportation Rideshare Marketplace</p> <!--Add your own dates-->
+            <p>  As P&L owner, expanded a $5.1 million portfolio to $13 million in annual revenue by optimizing acquisition and retention strategies, offering new services, streamlining driver qualifications, executing pricing adjustments and enhancing supply productivity; leveraged tools such as Tableau, Excel, CRM, internal ERP, and Click-Up to drive revenue growth, market densification, successful market launches and marketplace development. </p>
+            <button style="padding-bottom: 5px;" type="button" class="btn btn-outline-success" id="btn1">See more</button>
+          </div>
+          <div class="small-container-right">
+            <img src="assets/digital-marketing-1725340.jpg" class="title-image">
+          </div>
+        </div>
 
-            button[0].addEventListener("click", function () {
-                login(password[0].value)
-            })
+        <!-- Current Project #2 -->
+        <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 40px;">
+          <div class="big-container-left">
+            <h3>Market Wind Down</h3>
+            <p class="time-text">Consumer Electronic Rentals</p> <!--Add your own dates-->
+            <p>Directed the U.S. market exit of a nine-figure brand, managing the sale of 20,000 tech units across 3,000 SKUs through refurbishment and re-commerce channels to maximize cost recovery and liquidity; devised and executed a subscription-level strategy for in-field assets with dynamically priced purchase offers; leveraging tools such as Python, SQL, ChatGPT-4, and Intercom to generate $10MM in gross sales, achieving a 75% average cost recovery across B2C and B2B channels and successfully managed the wind-down process whilst maximizing market debt write-off.</p>
+            <button style="padding-bottom: 5px;" type="button" class="btn btn-outline-success" id="btn2">See more</button>
+          </div>
+          <div class="small-container-right">
+            <img src="assets/pexels-fauxels-3183186.jpg" class="title-image">
+          </div>
+        </div>
 
-            document.onkeydown = function (e) {
-                e = e || window.event
-                if (e.keyCode == 13) {
-                    login(password[0].value)
-                }
-            }
-        </script>
-    </body>
+        <!-- Current Project #3 -->
+        <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 40px;">
+          <div class="big-container-left">
+            <h3>WMS Evaluation 
+            </h3>
+            <p class="time-text">Professional Consultant</p> <!--Add your own dates-->
+            <p>Evaluated two warehouse management systems (WMS) for a fashion e-commerce brand requiring unique features such as live-selling fulfillment. Diagnosed operational challenges stemming from WMS2 integration and provided a clear deliverable on direction to continue or revert to WMS1.</p>
+            <button style="padding-bottom: 5px;" type="button" class="btn btn-outline-success" id="btn3">Visit</button>
+          </div>
+          <div class="small-container-right">
+            <img src="assets/technology-6873012.jpg" class="title-image">
+          </div>
+        </div>
+
+        <!-- Completed projects -->
+        <h2 style="padding-bottom: 20px">Past Projects</h2>
+
+        <!-- Completed Project #1 -->
+        <div class="flex-container" style="padding-bottom: 100px; padding-top: 50px;">
+          <div class="small-container-left" style="">
+            <img src="assets/pexels-tiger-lily-4483775.jpg" alt="" class="title-image">
+          </div>
+          <div class="big-container-right" style="">
+            <h3>Warehousing Operations Consolidation</h3>
+            <p class="time-text">Professional Consultant</p>
+            <p style="padding-bottom: 10px;">Conducted a comprehensive assessment of an e-commerce fashion conglomerate’s operations and presented a business case to consolidate inventory and warehousing facilities/functions. Performed market research and analysis of labor costs and real estate trends. Collaborated with industry partners and internal stakeholders to ensure a seamless inventory transfer process with minimal impact to customer experience.</p>
+            <button type="button" class="btn btn-outline-success" id="btn4">See more</button>
+          </div>
+        </div>
+
+        <!-- Completed Project #2 -->
+        <div class="flex-container" style="padding-bottom: 100px; padding-top: 50px;">
+          <div class="small-container-left" style="">
+            <img src="assets/data-4570804.jpg" alt="" class="title-image">
+          </div>
+          <div class="big-container-right" style="">
+            <h3>Promotional Optimization</h3>
+            <p class="time-text">Marketing Expert</p>
+            <p style="padding-bottom: 10px;">Developed a statistical model leveraging historical supply and demand variable trends together with r-values to forecast outcomes and measure promotional ROI with precision; utilized Python, Excel, Machine Learning and Tableau to improve spend visibility, reallocate inefficient budgets, justify expenditures with positive return; enhance marketplace performance, customer experience and net revenue.</p>
+            <button type="button" class="btn btn-outline-success" id="btn5">See more</button>
+          </div>
+        </div>
+
+        <!-- Completed Project #3 -->
+        <div class="flex-container" style="padding-bottom: 100px; padding-top: 50px;">
+          <div class="small-container-left" style="">
+            <img src="assets/consulting-3031678.jpg" alt="" class="title-image">
+          </div>
+          <div class="big-container-right" style="">
+            <h3>Consulting Partnership</h3>
+            <p class="time-text">Shields Logistics Solutions</p>
+            <p style="padding-bottom: 10px;">Provide strategic insights and hands-on support to streamline processes, reduce costs, and enhance delivery performance. Leaders in logistics and supply chain solutions, recognized for forward-thinking approaches, exceptional service, and commitment to helping our clients scale and succeed in an ever-evolving eCom market.
+            </p>
+            <button type="button" class="btn btn-outline-success" id="btn6">Visit</button>
+          </div>
+        </div>
+
+
+        <!-- Hobbies -->
+        <h2 style="padding-bottom: 20px">My other hobbies</h2>
+
+        <div class="row">
+          <!-- FIRST HOBBY CARD -->
+          <div class="col-sm-4" style="padding-bottom: 20px">
+            <div class="card">
+              <img src="assets/mountaineering 5.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Alpinism</p>
+                <button type="button" class="btn btn-outline-success" id="hobbyBtn1">See more</button>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd HOBBY CARD -->
+          <div class="col-sm-4" style="padding-bottom: 20px">
+            <div class="card">
+              <div class="card">
+                <img src="assets/family 5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Family</p>
+                  <button type="button" class="btn btn-outline-success" id="hobbyBtn2">See more</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3rd HOBBY CARD -->
+          <div class="col-sm-4" style="padding-bottom: 20px">
+            <div class="card">
+              <div class="card">
+                <img src="assets/gardening 3.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Gardening</p>
+                  <button type="button" class="btn btn-outline-success" id="hobbyBtn3">See more</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 4th HOBBY CARD -->
+          <div class="col-sm-4" style="padding-bottom: 20px">
+            <div class="card">
+              <div class="card">
+                <img src="assets/sport 1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Sport</p>
+                  <button type="button" class="btn btn-outline-success" id="hobbyBtn4">See more</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 5th HOBBY CARD -->
+          <div class="col-sm-4" style="padding-bottom: 20px">
+            <div class="card">
+              <div class="card">
+                <img src="assets/wood shop 3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Woodworking</p>
+                  <button type="button" class="btn btn-outline-success" id="hobbyBtn5">See more</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 6th HOBBY CARD -->
+          <div class="col-sm-4" style="padding-bottom: 20px">
+            <div class="card">
+              <div class="card">
+                <img src="assets/harvard 1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Travel</p>
+                  <button type="button" class="btn btn-outline-success" id="hobbyBtn6">See more</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <h2 style="padding-bottom: 20px; padding-top: 40px;">Languages I speak</h2>
+        
+        <p>English  (native) - 100%</p>
+        <div class="progressbar">
+          <div class="inner-progressbar english">100%</div>
+        </div>
+        <audio controls>
+          <source src="assets/English Webite Intro New.mp4"> <!--ADD YOUR OWN RECORDING OF YOU SPEAKING THE LANGUAGE - currently there is no audio file called English.m4a in assets file -->
+        Your browser does not support the audio element.
+        </audio>
+        <br> <br>
+        <p style="padding-bottom: 20px;">I'm originally from Texas, but I've disappointed many with my lack of an accent. I'm afraid I grew up too close to the city to develop any kind of drawl. However, I'm told I do an excellent Rooster Cogburn impersonation!</p>
+        
+        
+        <p>Spanish - 100%</p>
+        <div class="progressbar">
+          <div class="inner-progressbar italian">100%</div>
+        </div>
+        <audio controls>
+          <source src="assets/Spanish Website Intro.mp4"> <!--ADD YOUR OWN RECORDING OF YOU SPEAKING THE LANGUAGE - currently there is no audio file called Italian.m4a in assets file -->
+        Your browser does not support the audio element.
+        </audio>
+        <br> <br>
+        <p style="padding-bottom: 20px;">I spent two incredible years living in the cities of Reynosa and Matamoros, Mexico. During that time, I volunteered to support local families and individuals, forming meaningful connections along the way. It took about nine months, countless conversations, and more than a few spicy peppers, but I eventually became fluent in Spanish. I deeply cherish my experiences in Mexico, where I had the privilege of immersing myself in the rich culture and warmth of its people.</p>
+      
+
+
+        <!-- Contact me / ending section -->
+        <h2 style="padding-bottom: 20px; padding-top: 80px;">Contact Me</h2>
+
+        <img src="assets/profile 2.jpeg"  class="rounded-corners" style="">
+
+        <br> <br>
+
+        <p style="padding-bottom: 20px;">Let's chat! I'd love to get in contact with you, so please feel free to email me at 1byusmith@gmail.com. </p>
+
+        <a href="1byusmith@gmail.com" class="fa fa-paper-plane" style="margin-right: 10px"></a>
+     
+
+        <br> <br> <br>
+
+      
+        <!--MODALS-->
+
+        <!-- Modal for Button #1 - change inside information such as images and text to make it your own-->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <span class="closeModal1">&times;</span>
+            <h2>Market Growth
+            </h2>
+            <br>
+            <div id="carouselIndicators1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/pexels-goumbik-669613.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/investment-5241253.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/pexels-goumbik-577210.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <br>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+            <p>As P&L owner, expanded a $5.1 million portfolio to $13 million in annual revenue by optimizing acquisition and retention strategies, offering new services, streamlining driver qualifications, executing pricing adjustments and enhancing supply productivity; leveraged tools such as Tableau, Excel, CRM, internal ERP, and Click-Up to drive revenue growth, market densification, successful market launches and marketplace development.
+            </p>
+            <p>Skills used:</p>
+            <ul>
+              <li>SQL, Data Visualization</li>
+              <li>ERP, JIRA, GSUITE</li>
+            </ul>
+            <p>Skills learned:</p>
+            <ul>
+              <li>General Management, Top to Bottom Financial Planning</li>
+            </ul>
+            <p>Drove exceptional value to the business through facilitation of the Market Effect - the symbiotic development & growth of both marketplace supply and demand </p>
+          </div>
+        </div>
+
+        <!-- Modal for Button #2 - change inside information such as images and text to make it your own-->
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <span class="closeModal2">&times;</span>
+            <h2>Market Wind Down
+            </h2>
+            <br>
+            <div id="carouselIndicators2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/pexels-mikhail-nilov-8355941.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/app3.webp" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/teamwork-3213924.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <br>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+            <p>Directed the U.S. market exit of a nine-figure brand, managing the sale of 20,000 tech units across 3,000 SKUs through refurbishment and re-commerce channels to maximize cost recovery and liquidity; devised and executed a subscription-level strategy for in-field assets with dynamically priced purchase offers; leveraging tools such as Python, SQL, ChatGPT-4, and Intercom to generate $10MM in gross sales, achieving a 75% average cost recovery across B2C and B2B channels and successfully managed the wind-down process whilst maximizing market debt write-off.
+
+            </p>
+            <p>Skills used:</p>
+            <ul>
+              <li>ERP, Excel, SQL, Python</li>
+              <li>Negotiation, Strategic Partnering, Process Mapping
+              </li>
+            </ul>
+            <p>Skills learned:</p>
+            <ul>
+              <li>Financial Planning, Investor Relations</li>
+            </ul>
+            <p>Successfully exited US market to allow for global brand restructure with improved balance sheet position</p>
+          </div>
+        </div>
+
+        <!--Button #3 goes to outside link, so no modal is necessary-->
+
+        <!-- Modal for Button #4 - change inside information such as images and text to make it your own-->
+        <div id="modal4" class="modal">
+          <div class="modal-content">
+            <span class="closeModal4">&times;</span>
+            <h2>Warehousing Operations Consolidation
+            </h2>
+            <br>
+            <div id="carouselIndicators4" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/transport-3210728.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/digital-marketing-1725340.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/store-5619201.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <br>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+            <p>Conducted a comprehensive assessment of an e-commerce fashion conglomerate’s operations and presented a business case to consolidate inventory and warehousing facilities/functions. Performed market research and analysis of labor costs and real estate trends. Collaborated with industry partners and internal stakeholders to ensure a seamless inventory transfer process with minimal impact to customer experience
+
+            </p>
+            <p>Skills used:</p>
+            <ul>
+              <li>Excel, Ship Hero</li>
+              <li>Monday, GSUITE</li>
+            </ul>
+            <p>Skills learned:</p>
+            <ul>
+              <li>3D Space Allocation, Industry Specifics - Fashion</li>
+            </ul>
+            <p>Provided an experienced, professional perspective, developed and xeecuted on strategic vision</p>
+          </div>
+        </div>
+
+        <!-- Modal for Button #5 - change inside information such as images and text to make it your own-->
+        <div id="modal5" class="modal">
+          <div class="modal-content">
+            <span class="closeModal5">&times;</span>
+            <h2>Promotional Optimization
+            </h2>
+            <br>
+            <div id="carouselIndicators5" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselIndicators5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselIndicators5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselIndicators5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/pexels-fauxels-3183127.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/source-4280758.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/mark-516279.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <br>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators5" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators5" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+            <p>Developed a statistical model leveraging historical supply and demand variable trends together with r-values to forecast outcomes and measure promotional ROI with precision; utilized Python, Excel, Machine Learning and Tableau to improve spend visibility, reallocate inefficient budgets, justify expenditures with positive return; enhance marketplace performance, customer experience and net revenue.
+            </p>
+            <p>Skills used:</p>
+            <ul>
+              <li>Statistial Modeling, Machine Learning</li>
+              <li>Dependant Variable Forecasting</li>
+            </ul>
+            <p>Skills learned:</p>
+            <ul>
+              <li>AB Testing</li>
+              <li>Marketing Strategies</li>
+            </ul>
+            <p>Empowered a team of manager with actualized data to guide marketing spend investment decisions</p>
+          </div>
+        </div>
+
+        <!--Button #6 goes to outside link, so no modal is necessary-->
+
+        <!-- MODALS FOR HOBBIES -->
+
+        <!-- Modal for Hobby Button #1 - change inside information such as images and text to make it your own-->
+        <div id="modalHobby1" class="modal">
+          <div class="modal-content">
+            <span class="closeModalHobby1">&times;</span>
+            <h2>Alpinism</h2>
+            <br>
+            <div id="carouselIndicatorsHobby1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselIndicatorsHobby1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselIndicatorsHobby1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselIndicatorsHobby1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/mountaineering 1.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/mountaineering 3.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/mountaineering 6.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <br>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsHobby1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsHobby1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+            <p>...or at least an aspiring alpinist. My love for the mountains started young with ski trips and hiking adventures in the ranges of Idaho and Utah. All four seasons offer a unique ambiance and atmosphere that’s hard to match. No matter where I go, the mountains always feel like home.</p>
+          </div>
+        </div>
+
+        <!-- Modal for Hobby Button #2 - change inside information such as images and text to make it your own-->
+        <div id="modalHobby2" class="modal">
+          <div class="modal-content">
+            <span class="closeModalHobby2">&times;</span>
+            <h2>Family</h2>
+            <br>
+            <div id="carouselIndicatorsHobby2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselIndicatorsHobby2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselIndicatorsHobby2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselIndicatorsHobby2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/family 1.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/family 2.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/family 4.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <br>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsHobby2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsHobby2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+            <p>The most important titles I'll ever carry are Husband and Father. If I'm not working, I'm probably playing with one or more of my four children. My lovely wife and I have been married for eight incredible years. My family is my drive to be the best version of myself each and every day.</p>
+          </div>
+        </div>
+
+        <!-- Modal for Hobby Button #3 - change inside information such as images and text to make it your own-->
+        <div id="modalHobby3" class="modal">
+          <div class="modal-content">
+            <span class="closeModalHobby3">&times;</span>
+            <h2>Gardening</h2>
+            <br>
+            <div id="carouselIndicatorsHobby3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselIndicatorsHobby3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselIndicatorsHobby3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselIndicatorsHobby3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/growing 1.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/gardening 1.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/gardening 6.jpeg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <br>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsHobby3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsHobby3" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+            <p>Cicero once said, "If you have a garden and a library, you have everything you need." I find myself happiest when my hands are in the dirt and my head is in the sun. To nurture a garden cultivates not just food for the body but also nourishment for the soul. At least, that’s what I try to remind myself when I’m plucking weeds or losing all my kale to bugs (true story).</p>
+          </div>
+        </div>
+
+        <!-- Modal for Hobby Button #4 - change inside information such as images and text to make it your own-->
+        <div id="modalHobby4" class="modal">
+          <div class="modal-content">
+            <span class="closeModalHobby4">&times;</span>
+            <h2>Sport</h2>
+            <br>
+            <div id="carouselIndicatorsHobby4" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselIndicatorsHobby4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselIndicatorsHobby4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselIndicatorsHobby4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/snow sports 1.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/sport 2.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/outdoors 3.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <br>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsHobby4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsHobby4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+            <p>Team and individual sports have played a significant role in my life. I played basketball and trained in MMA for many years, but nowadays, I mostly enjoy outdoor sporting activities with my family and friends.</p>
+          </div>
+        </div>
+
+        <!-- Modal for Hobby Button #5 - change inside information such as images and text to make it your own-->
+        <div id="modalHobby5" class="modal">
+          <div class="modal-content">
+            <span class="closeModalHobby5">&times;</span>
+            <h2>Woodworking</h2>
+            <br>
+            <div id="carouselIndicatorsHobby5" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselIndicatorsHobby5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselIndicatorsHobby5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselIndicatorsHobby5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/wood shop 5.jpeg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/wood shop 1.png" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/wood shop 4.png" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <br>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsHobby5" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsHobby5" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+            <p>My woodshop is where my creativity comes to life. Designing and crafting not only helps me focus but also brings a sense of relaxation. I especially enjoy making gifts and experimenting with new projects.</p>
+          </div>
+        </div>
+
+        <!-- Modal for Hobby Button #6 - change inside information such as images and text to make it your own-->
+        <div id="modalHobby6" class="modal">
+          <div class="modal-content">
+            <span class="closeModalHobby6">&times;</span>
+            <h2>Travel</h2>
+            <br>
+            <div id="carouselIndicatorsHobby6" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselIndicatorsHobby6" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselIndicatorsHobby6" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselIndicatorsHobby6" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/houston 1.jpeg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/travel 1.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/travel 2.jpg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <br>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsHobby6" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsHobby6" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+            <p>Like most people, I love experiencing different places and cultures. Food, art, nature—I enjoy it all. While there’s still plenty left on my bucket list, my favorite visits so far have been to North Germany, Alaska, and the Florida Keys!</p>
+          </div>
+        </div>
+
+      </center>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="index.js" charset="utf-8"></script>
+  </body>
 </html>
